@@ -1,34 +1,53 @@
-# :checkered_flag: NOME DO PROJETO
+# :checkered_flag: CONECTA VIDAS
 
-Breve descrição do que o seu projeto faz.
+Plataforma que oferece suporte emocional coletivo e individual para a comunidade por meio de voluntários capacitados, conectando as pessoas a iniciativas de saúde mental.
 
 ## :technologist: Membros da equipe
 
-Matrícula, nome e curso dos participantes.
+554679 - José Witalo - Ciência da Computação.
 
 ## :bulb: Objetivo Geral
-Descrever o objetivo de geral do projeto
+Promover o bem-estar emocional e a conscientização sobre saúde mental por meio de uma rede de apoio digital acessível.
 
 ## :eyes: Público-Alvo
-Público-alvo do projeto
+Pessoas que estão em busca de suporte emocional e profissionais ou voluntários dedicados à saúde mental.
 
 ## :star2: Impacto Esperado
-Descreva o impacto esperado do projeto em relação ao público alvo
+Aumentar o acesso ao apoio emocional e reduzir o estigma em torno da saúde mental, criando um ambiente seguro para desabafos e orientações.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
-
-> Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
+Usuário não logado.
+Usuário registrado como "paciente".
+Usuário registrado como "voluntário".
+Usuário administrador.
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-Descreve ou liste brevemente as principais funcionalidades da aplicação que será desenvolvida. Destaque a funcionalidades que serão acessévies a todos os usuários e aquelas restriras a usuários logados.
+Área com informações e artigos a respeito de temas da saúde mental(Todos podem acessar).
 
+
+Agendamento de consultas online(Apenas usuários registrados e administrador):
+  Paciente: Verificar a disponibilidade e realizar agendamento de consultas com voluntários registrados no sistema.
+  Voluntário: Visualiza e confirma agendamentos requisitados pelos pacientes.
+  Administrador: Supervisiona todos os agendamentos realizados no sistema, podendo gerar relatórios.
+
+  
+Histórico de consultas(Apenas usuários registrados e administrador):
+  Paciente e Voluntário: Podem visualizar seus históricos de consultas realizadas, com informações dos participantes, data etc.
+  Administrador: Consulta todas as consultas realizadas no sistema.
+
+  
+Feedback das consultas realizadas(Apenas usuários registrados e administrador):
+  Paciente: Poderá avaliar as consultas que ele participou.
+  Voluntário: Pode visualizar as avaliações de consultas que ele realizou.
+  Administrador: Pode visualizar todas as avaliações que foram feitas.
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
-Liste as principais entidades do sistema.
-
+Usuário(ID(PK), nome, email, senha, tipo).
+Agendamento(ID_agendamento(PK), ID_paciente(FK), ID_voluntario(FK), data, status).
+Histórico(ID_historico(PK), ID_agendamento(FK), data).
+Feedback(ID_avalia(PK), ID_paciente(FK), ID_voluntario(FK), ID_agendamento(FK), nota, comentário).
 
 ----
 
