@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta Vidas</title>
     <link rel="stylesheet" href="/front-end/src/css/style.css">
+    <link rel="shortcut icon" href="/Imagens/favcon.ico">
 </head>
 <body>
     <header>
@@ -14,13 +15,22 @@
                 Conecta Vidas
             </a>
         </div>
+
         <nav class="navheadresp">
             <a href="login.html"><span>Login</span></a>
             <a href="cadastro-user.html"><span>Registrar</span></a>
         </nav>
+
+        <div class="container-logo sumir">
+            <h2 class="hidden profile">Nome do user aqui</h2>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn-logout"> <i class="bi bi-box-arrow-left btn-color"></i> </button>
+              </form>              
+        </div>
     </header>
     <main class="index">
 
+        
         <div class="menu-cont hidden">
             <div class="menu">
                 <nav>
@@ -29,7 +39,6 @@
                     <a href="#Transtornos Mentais">Transtornos Mentais</a>
                     <a href="#Ansiedade">Ansiedade</a>
                     <a href="#Depressão">Depressão</a>
-
                 </nav>
             </div>
         </div>
@@ -152,6 +161,16 @@
                     Por fim, é importante destacar que buscar ajuda não é sinal de fraqueza, mas um passo importante para o cuidado com a própria saúde. O combate ao estigma e o incentivo ao diálogo aberto sobre saúde mental são essenciais para uma sociedade mais saudável e acolhedora.
                 </p>
             </section>
+        </div>
+
+        <div class="menu-cont hidden">
+
+            <div class="menu menu-ajuda">
+                <nav>
+                    <a href="https://cvv.org.br/" target="_blank">Em caso de emergência, disque 188 ou acesse o site do Centro de Valorização à Vida (CVV)</a>
+                    <a href="home.html" class="autenticado">Página principal</a>
+                </nav>
+            </div>
         </div>
     </main>
     <footer>

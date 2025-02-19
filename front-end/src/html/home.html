@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Vidas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/front-end/src/css/style.css">
+    <link rel="shortcut icon" href="/Imagens/favcon.ico">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <a href="index.html" id="logo-home">
+                <img src="/Imagens/freepik__modern-style-detailled-illustration-logo-featuring__94055.png" alt="logo do conecta vidas" class="img-logo">
+                Conecta Vidas
+            </a>
+        </div>
+        <div class="container-logo">
+            <h2 class="hidden profile">Nome do user aqui</h2>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn-logout"> <i class="bi bi-box-arrow-left btn-color"></i> </button>
+              </form>              
+        </div>
+    </header>
+    <main class="index">
+
+        <div class="col1">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <h2>Agende uma consulta agora mesmo</h2>
+                <img src="/Imagens/Counseling-on-mental-health-problems-and-flat-illustration-problems-psychotherapy_443035_wh860-Photoroom.png" alt="" class="img-home">
+            </label>
+            
+        </div>
+
+
+        <div class="principal table-cont">
+
+            <dialog id="modal">
+                <button id="close-modal">
+                    <i class="bi bi-x-lg"></i> 
+                </button>
+            
+                <div id="container-modal">
+                    <h2>Agendar</h2>
+            
+                    <form action="Agendamento" id="agendamento-form" method="post">
+                        
+                        <label for="voluntario">
+                            <h3>Voluntário:</h3>
+                        </label>
+                        <select name="voluntario" id="voluntario" required>
+                            <option value="" disabled selected>Selecione um voluntário</option>
+                        </select>
+            
+                        <label for="dia">
+                            <h3>Dia:</h3>
+                        </label>
+                        <select name="dia" id="dia" required>
+                            <option value="" >Dia</option>
+                        </select>
+        
+                        <label for="mes">
+                            <h3>Mês:</h3>
+                        </label>
+                        <select name="mes" id="mes" required>
+                            <option value="" disabled selected>Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+
+                        <label for="horario">
+                            <h3>Horário:</h3>
+                        </label>
+                        <select name="horario" id="horario" required>
+                            <option value="" >Horário</option>
+                        </select>
+            
+                        <button type="submit" id="submit-btn">Agendar</button>
+                    </form>
+                </div>
+            </dialog>
+
+            <table>
+                <h1>Consultas Pendentes</h1>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Voluntário</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+
+            </table>
+            <table>
+                <h1>Histórico de consultas</h1>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Voluntário</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col3 menu-cont hidden">
+
+            <div class="menu menu-ajuda">
+                <nav>
+                    <a href="https://cvv.org.br/" target="_blank">Em caso de emergência, disque 188 ou acesse o site do Centro de Valorização à Vida (CVV)</a>
+                    <a href="index.html">Vizualizar artigos sobre saúde mental</a>
+                </nav>
+            </div>
+
+            
+        </div>
+    </main>
+    <script src="/front-end/src/js/script.js"></script>
+</body>
+</html>

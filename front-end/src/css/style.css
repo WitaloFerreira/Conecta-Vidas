@@ -31,10 +31,9 @@ main{
     margin-top: 80px;
 }
 
-
 .index{
-    align-items: normal;
-    justify-content: space-evenly;
+    align-items:normal;
+    justify-content: space-between;
 }
 
 header{
@@ -49,6 +48,20 @@ header{
 .container-logo{
     display: flex;
     align-items: center;
+    margin: 15px;
+    padding: 10px;
+}
+
+.btn-logout{
+    border: none;
+    background-color: #2e3031;
+    width: 50px;
+    height: 40px;
+    font-size: 2em
+}
+
+.btn-color{
+    color: #81b1c8;
 }
 
 .navheadresp{
@@ -64,6 +77,10 @@ header{
     color: rgb(53, 50, 50);
 }
 
+.sumir{
+    display: none;
+}
+
 
 .coluna-1{
     display: flex;
@@ -73,6 +90,11 @@ header{
 .img-logo{
     width: 78px;
     height: 78px;
+}
+
+.img-home{
+    width: 220px;
+    height: 240px;
 }
 
 .img-back{
@@ -156,29 +178,32 @@ input[type="submit"]{
 }
 
 .menu-cont{
-    
-    flex: 0.8;
-    width: 200px;
+    flex: 1;
 }
 
-.menu{
+.menu, .agenda-cont{
     position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
     background-color: #2e3031;
-    height: 300px;
-    width: 150px;
+    height: 500px;
+    width: 250px;
     display: flex;
     justify-content: center;
     border-radius: 5px;
     align-items: center;
     text-align: center;
-    margin-top: 250px;
+}
 
+.menu-ajuda{
+    right: 20px;
 }
 
 .menu a{
     display: block;
     color: #81b1c8;
-    margin-top: 10px;
+    margin: 60px 10px;
 }
 
 .artigos{
@@ -194,8 +219,11 @@ input[type="submit"]{
 }
 
 .principal{
+    display: flex;
     flex: 2;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -208,50 +236,150 @@ input[type="submit"]{
 }
 
 .profile{
+    margin: 10px;
     color: #81b1c8;
 }
 
-.img-profile{
-    width: 64px;
-    height: 64px;
+input[type="checkbox"]{
+    display: none;
 }
 
-.agenda-cont{
+#home-main{
+    flex-direction: row;
+    justify-content: start;
+}
+
+.table-cont{
+    justify-content: start;
+
+}
+
+table {
+    background-color: #2e3031;
+}
+
+th, td{
+    color: #81b1c8;
+    padding: 1px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.col1{
     display: flex;
+    flex-direction: column;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: #2e3031;
-    width: 400px;
-    height: 440px;
+    text-align: center;
+}
+
+.button-respon{
+    display: none;
+}
+
+
+.col3{
+    flex: 1;
+}
+
+.delete, .rate{
+    border: none;
+    font-size: large;
+    color: white;
+    background-color: red;
+    width: 60px;
+    height: 40px;
     border-radius: 5px;
 }
 
-
-.menu-consulta{
-    width: 150px;
-    list-style-type: none;
-    padding: 0px;
+button:hover, input[type = "submit"]{
+    cursor:pointer;
 }
 
-.menu-consulta a{
-    padding: 5px;
-    margin-bottom: 15px;
-    display: block;
+.rate{
+    background-color: rgb(21, 179, 21);
+}
+
+.col1 h2{
+    text-decoration: underline;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2e3031;
+    margin: 0;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 90vw;  
+    max-height: 90vh; 
+  }
+
+  dialog h3, dialog h2 {
     color: #81b1c8;
-    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+  }
+
+#container-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: #81b1c8;
+    height: 450px;
+    width: 400px;
+}
+
+#container-modal select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #3a3c3d;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+option, #close-modal i{
+    color: #81b1c8;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #81b1c8;
+    color: #2e3031;
+    margin: 20px auto;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
-.menu-consulta a:hover, .menu-consulta a:focus{
-    background-color: white;
-    border-radius: 10px;
-}
-
-.menu-consulta h2{
-    color: #81b1c8;
+.error-message {
+    color: red;
+    font-size: 0.9em;
     margin: 5px;
+    display: block;
 }
-
 
 @media screen and (min-width: 768px){
 
@@ -259,20 +387,16 @@ input[type="submit"]{
         flex-direction: row;
         margin-top: 0px;
     }
-    
-    .index-log{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 90px;
-    }
-
     main h1{
         margin-top: 70px;
     }
 
     .hidden{
-        display: block;
+        display: flex;
+    }
+
+    .button-respon{
+        display: inline;
     }
 
     .coluna-1{
@@ -306,10 +430,22 @@ input[type="submit"]{
         height: 400px;
     }
 
+    .img-home{
+        width: 280px;
+        height: 300px;
+    }
+
     .artigos{
         max-width: 720px;
         max-height: 720px;
     }
 
-    
+    table {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .delete, .rate{
+        width: 85px;
+    }
 }
